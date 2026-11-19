@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flávio Lima | Manutenção e Instalações Residenciais e Comerciais</title>
+<meta name="description" content="Flávio Lima — mais de 20 anos levando soluções. Elétrica, hidráulica, cooktops, montagem de móveis, drywall, pintura, telhados e reparos em eletrodomésticos. Orçamento pelo WhatsApp (19) 98104-2332.">
+<meta name="theme-color" content="#16161a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3efe6; --paper-2:#e9e3d6; --ink:#16161a; --ink-2:#232329; --ink-soft:#4a4a52;
+  --muted:#6f6b63; --line:#d9d2c3; --yellow:#ffc21a; --yellow-2:#ffad00;
+  --wa:#1fbf5b; --wa-dark:#14a24b; --max:1200px; --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;font-family:Barlow,system-ui,sans-serif;font-size:17px;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",Impact,sans-serif;text-transform:uppercase;line-height:.98;letter-spacing:.005em}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.hl{position:relative;white-space:nowrap;z-index:0}
+.hl::after{content:"";position:absolute;left:-.08em;right:-.08em;bottom:.06em;height:.38em;background:var(--yellow);z-index:-1;transform:skewX(-8deg)}
+
+/* Ruler motif */
+.ruler{height:22px;background:
+  repeating-linear-gradient(90deg,var(--ink) 0 1.5px,transparent 1.5px 100px) bottom/100% 22px no-repeat,
+  repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 50px) bottom/100% 14px no-repeat,
+  repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 10px) bottom/100% 7px no-repeat;opacity:.85}
+.ruler.light{filter:invert(1);opacity:.35}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(243,239,230,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand b{font-family:"Barlow Condensed";font-weight:800;font-size:1.45rem;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+.brand span{display:block;font-size:.72rem;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.links{display:flex;gap:28px;align-items:center;font-weight:600;font-size:.98rem}
+.links a:not(.btn){position:relative}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--ink);transition:right .25s}
+.links a:not(.btn):hover::after{right:0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;border-radius:10px;padding:15px 24px;font-size:1.02rem;border:2px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s,background .2s;white-space:nowrap}
+.btn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)!important}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn-wa:hover{background:var(--wa-dark);transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ink)}
+.btn-line{background:transparent;box-shadow:4px 4px 0 transparent}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-yellow{background:var(--yellow);color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.btn-yellow:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ink)}
+.btn-sm{padding:10px 16px;font-size:.92rem;box-shadow:3px 3px 0 var(--ink)}
+
+/* Hero */
+.hero{padding:64px 0 40px;position:relative}
+.hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;font-weight:700;font-size:.92rem}
+.kicker .dot{width:10px;height:10px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 4px rgba(31,191,91,.18)}
+.hero h1{font-size:clamp(3rem,7.4vw,6.1rem);font-weight:800}
+.hero .lead{font-size:1.18rem;color:var(--ink-soft);max-width:560px;margin:24px 0 32px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.proof{display:flex;gap:28px;margin-top:38px;flex-wrap:wrap}
+.proof div{border-left:3px solid var(--yellow);padding-left:12px}
+.proof b{display:block;font-family:"Barlow Condensed";font-size:2rem;font-weight:800;line-height:1}
+.proof small{color:var(--muted);font-weight:600;font-size:.86rem}
+
+/* Work order card */
+.os{background:var(--ink);color:#eceae4;border-radius:18px;padding:26px 26px 22px;position:relative;box-shadow:12px 12px 0 var(--yellow);transform:rotate(1.2deg)}
+.os::before{content:"";position:absolute;top:0;left:22px;right:22px;height:8px;background:repeating-linear-gradient(-45deg,var(--yellow) 0 12px,var(--ink) 12px 24px);border-radius:0 0 4px 4px}
+.os-head{display:flex;justify-content:space-between;align-items:flex-start;margin:10px 0 18px}
+.os-head h3{font-size:1.7rem;color:#fff}
+.os-head .mono{color:#a7a49c}
+.os-logo{background:var(--paper);border-radius:12px;padding:8px}
+.os ul{list-style:none;border-top:1px dashed #44444c}
+.os li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed #44444c;font-weight:500}
+.box{width:20px;height:20px;border:2px solid #77757d;border-radius:4px;display:grid;place-items:center;flex:none}
+.box svg{opacity:0;transform:scale(.4);transition:all .3s}
+.os li.on .box{background:var(--yellow);border-color:var(--yellow)}
+.os li.on .box svg{opacity:1;transform:none}
+.os-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.os-foot .mono{color:#a7a49c}
+.stamp{font-family:"Barlow Condensed";font-weight:800;text-transform:uppercase;color:var(--yellow);border:2.5px solid var(--yellow);padding:4px 12px;border-radius:6px;transform:rotate(-6deg);font-size:1.05rem;letter-spacing:.06em}
+
+/* Ticker */
+.ticker{background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:16px 0;margin-top:40px}
+.ticker .t{display:inline-flex;gap:38px;animation:mq 38s linear infinite;font-family:"Barlow Condensed";font-weight:700;font-size:1.35rem;text-transform:uppercase}
+.ticker .t span{display:inline-flex;align-items:center;gap:38px}
+.ticker .t span::after{content:"";width:9px;height:9px;background:var(--yellow);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:96px 0}
+.sh{display:grid;grid-template-columns:auto 1fr;gap:18px 40px;align-items:end;margin-bottom:48px}
+.sh .num{font-family:"Barlow Condensed";font-weight:800;font-size:5.5rem;line-height:.8;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.sh h2{font-size:clamp(2.3rem,5vw,3.8rem);font-weight:800}
+.sh p{grid-column:2;color:var(--ink-soft);max-width:620px;font-size:1.08rem}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+.svc{border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:28px 24px 26px;position:relative;background:var(--paper);transition:background .25s,color .25s;min-height:250px;display:flex;flex-direction:column}
+.svc .mono{color:var(--muted);transition:color .25s}
+.svc .ic{width:52px;height:52px;margin:18px 0 18px;display:grid;place-items:center;background:var(--yellow);border:2px solid var(--ink);border-radius:12px;transition:transform .3s}
+.svc h3{font-size:1.65rem;font-weight:800;margin-bottom:8px}
+.svc p{color:var(--ink-soft);font-size:.98rem;transition:color .25s}
+@media (hover:hover){.svc:hover{background:var(--ink);color:var(--paper)}
+.svc:hover p,.svc:hover .mono,.svc:hover .go{color:#b9b6ad}
+.svc:hover .ic{transform:rotate(-8deg) scale(1.06)}}
+.svc{cursor:pointer}.svc .go{margin-top:auto;padding-top:16px;font-weight:700;font-size:.92rem;color:var(--ink);display:flex;align-items:center;gap:6px}
+.svc:active{background:var(--ink);color:var(--paper)}
+.svc.cta-card{background:var(--yellow)}
+.svc.cta-card:hover{background:var(--yellow);color:var(--ink)}
+.svc.cta-card:hover p{color:var(--ink-soft)}
+.svc.cta-card .btn{margin-top:auto;align-self:flex-start}
+
+/* Dark band: why */
+.band{background:var(--ink);color:var(--paper);position:relative}
+.band .sh .num{-webkit-text-stroke:2px var(--yellow)}
+.band .sh p{color:#b9b6ad}
+.why{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:stretch}
+.big20{border:2px solid #3a3a42;border-radius:var(--r);padding:36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.big20 .n{font-family:"Barlow Condensed";font-weight:800;font-size:clamp(9rem,20vw,15rem);line-height:.8;color:var(--yellow)}
+.big20 .n sup{font-size:.4em;vertical-align:top}
+.big20 .dim{display:flex;align-items:center;gap:10px;margin:22px 0 4px;color:#a7a49c}
+.big20 .dim i{flex:1;height:1px;background:#6b6973;position:relative}
+.big20 .dim i::before,.big20 .dim i::after{content:"";position:absolute;top:-5px;width:1px;height:11px;background:#6b6973}
+.big20 .dim i::before{left:0}.big20 .dim i::after{right:0}
+.big20 h3{font-size:2rem;font-weight:800}
+.reasons{display:grid;gap:14px}
+.reason{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:22px;border:2px solid #3a3a42;border-radius:var(--r);transition:border-color .25s,transform .25s}
+@media (hover:hover){.reason:hover{border-color:var(--yellow);transform:translateX(4px)}}
+.reason .ic{width:48px;height:48px;border-radius:10px;background:#2a2a31;color:var(--yellow);display:grid;place-items:center}
+.reason h3{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.reason p{color:#b9b6ad;font-size:.97rem}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;background:var(--paper)}
+.step{padding:34px 30px;position:relative}
+.step+.step{border-left:2px dashed var(--ink)}
+.step .n{font-family:"Barlow Condensed";font-weight:800;font-size:1rem;display:inline-block;background:var(--ink);color:var(--yellow);padding:4px 10px;border-radius:6px;margin-bottom:18px}
+.step h3{font-size:1.75rem;font-weight:800;margin-bottom:8px}
+.step p{color:var(--ink-soft)}
+
+/* Quote builder */
+.quote{background:var(--paper-2);border-block:2px solid var(--ink)}
+.qb{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.panel{background:var(--paper);border:2px solid var(--ink);border-radius:18px;padding:30px;box-shadow:8px 8px 0 var(--ink)}
+.field{margin-bottom:22px}
+.field>label,.field>.lbl{display:block;font-weight:700;margin-bottom:10px}
+.field .hint{font-weight:500;color:var(--muted);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--ink);background:transparent;border-radius:999px;padding:8px 14px;font-weight:600;font-size:.93rem;cursor:pointer;transition:background .15s,color .15s;display:inline-flex;align-items:center;gap:7px}
+.chip::before{content:"+";font-weight:800}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--yellow)}
+.chip[aria-pressed="true"]::before{content:"✓"}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,select,textarea{width:100%;background:#fff;border:2px solid var(--ink);border-radius:10px;padding:13px 14px;outline:none;transition:box-shadow .15s}
+input:focus,select:focus,textarea:focus{box-shadow:4px 4px 0 var(--yellow)}
+textarea{resize:vertical;min-height:96px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+.seg button{background:#fff;border:0;padding:12px 8px;font-weight:700;cursor:pointer;font-size:.93rem}
+.seg button+button{border-left:2px solid var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--yellow)}
+.preview{position:sticky;top:96px}
+.phone-mock{background:#0b141a;border-radius:22px;padding:16px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--yellow)}
+.pm-top{display:flex;align-items:center;gap:10px;color:#e9edef;padding:4px 4px 14px;border-bottom:1px solid #22303a}
+.pm-top .av{width:36px;height:36px;border-radius:50%;background:var(--paper);display:grid;place-items:center}
+.pm-top b{display:block;font-size:.98rem}
+.pm-top small{color:#8696a0;font-size:.78rem}
+.pm-body{min-height:220px;padding:18px 4px 6px;display:flex;flex-direction:column;justify-content:flex-end;background:radial-gradient(#13202a 1px,transparent 1px) 0 0/14px 14px}
+.bubble{align-self:flex-end;max-width:92%;background:#005c4b;color:#e9edef;padding:10px 12px 8px;border-radius:12px 2px 12px 12px;font-size:.93rem;white-space:pre-wrap;word-wrap:break-word;line-height:1.45}
+.bubble small{display:block;text-align:right;color:#9fc5bb;font-size:.7rem;margin-top:4px}
+.send{margin-top:16px;width:100%}
+.note{font-size:.86rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* FAQ */
+.faq{max-width:860px}
+details{border-bottom:2px solid var(--ink)}
+details:first-child{border-top:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:22px 4px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:"Barlow Condensed";font-weight:700;font-size:1.55rem;text-transform:uppercase}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:34px;height:34px;flex:none;border:2px solid var(--ink);border-radius:8px;display:grid;place-items:center;transition:transform .25s,background .2s}
+details[open] summary .pm{transform:rotate(45deg);background:var(--yellow)}
+details p{padding:0 4px 24px;color:var(--ink-soft);max-width:720px}
+
+/* Final CTA */
+.final{background:var(--yellow);border-top:2px solid var(--ink);padding:90px 0 80px;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0 0 auto 0;height:14px;background:repeating-linear-gradient(-45deg,var(--ink) 0 16px,var(--yellow) 16px 32px)}
+.final .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}
+.final h2{font-size:clamp(2.6rem,6.5vw,5.4rem);font-weight:800}
+.final .tel{font-family:"Barlow Condensed";font-weight:800;font-size:clamp(2.2rem,4.5vw,3.4rem);display:block;margin-bottom:16px;line-height:1}
+.final .right{text-align:right}
+
+footer{background:var(--ink);color:#a7a49c;padding:36px 0 40px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+footer .brand b{color:var(--paper)}
+
+/* Mobile bar */
+.mbar{display:none}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .hero .grid,.why,.qb,.final .grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .os{max-width:520px;transform:none}
+  .preview{position:static}
+  .final .right{text-align:left}
+}
+@media (max-width:760px){
+  body{font-size:17px;padding-bottom:84px}
+  .wrap{padding:0 18px}
+  .nav{height:62px}
+  .brand b{font-size:1.3rem}
+  .brand span{font-size:.66rem}
+  .links{display:none}
+  .hero{padding:28px 0 0}
+  .kicker{margin-bottom:14px}
+  .hero h1{font-size:clamp(2.9rem,14vw,3.8rem)}
+  .hero .lead{font-size:1.12rem;margin:16px 0 22px;color:#3d3d44}
+  .ctas{flex-direction:column}
+  .ctas .btn{width:100%;padding:17px 20px;font-size:1.1rem}
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+  .proof div{padding-left:9px}
+  .proof b{font-size:1.7rem}
+  .proof small{font-size:.8rem;line-height:1.2;display:block;margin-top:3px}
+  .os{transform:none;box-shadow:6px 6px 0 var(--yellow);padding:22px 18px 18px;margin-right:6px}
+  .os li:nth-child(n+4){display:none}
+  .os-head h3{font-size:1.45rem}
+  .ticker{margin-top:34px;padding:12px 0}
+  .ticker .t{font-size:1.15rem}
+  section{padding:56px 0}
+  .sh{grid-template-columns:auto 1fr;gap:4px 14px;margin-bottom:28px;align-items:center}
+  .sh .num{font-size:2.6rem;-webkit-text-stroke-width:1.5px}
+  .sh h2{font-size:2.3rem}
+  .sh p{grid-column:1/-1;font-size:1.05rem;margin-top:6px}
+  /* services as easy list rows */
+  .svc-grid{grid-template-columns:1fr;border:0;gap:10px}
+  .svc{display:grid;grid-template-columns:52px 1fr 22px;grid-template-rows:auto auto;column-gap:14px;align-items:center;min-height:0;padding:16px 14px;border:2px solid var(--ink);border-radius:14px}
+  .svc .mono{display:none}
+  .svc .ic{grid-row:1/3;margin:0;width:52px;height:52px}
+  .svc h3{font-size:1.35rem;margin:0;align-self:end}
+  .svc p{font-size:.95rem;line-height:1.35;align-self:start;margin-top:3px}
+  .svc .go{grid-column:3;grid-row:1/3;padding:0;font-size:0;gap:0}
+  .svc .go svg{width:22px;height:22px}
+  .svc.cta-card{grid-column:auto!important;display:block;padding:24px 20px}
+  .svc.cta-card h3{font-size:1.8rem!important}
+  .svc.cta-card .btn{width:100%;padding:16px}
+  .band .wrap{padding-top:50px!important}
+  .band .spacer{height:56px!important}
+  .big20{padding:24px}
+  .big20 .n{font-size:8rem}
+  .big20 h3{font-size:1.6rem;margin-top:14px}
+  .reason{grid-template-columns:44px 1fr;padding:16px;gap:14px}
+  .reason .ic{width:44px;height:44px}
+  .reason h3{font-size:1.3rem}
+  .steps{grid-template-columns:1fr}
+  .step{padding:22px 20px}
+  .step+.step{border-left:0;border-top:2px dashed var(--ink)}
+  .step h3{font-size:1.55rem}
+  .panel{padding:20px 16px;box-shadow:4px 4px 0 var(--ink);border-radius:16px}
+  .field>label,.field>.lbl{font-size:1.05rem}
+  .chips{gap:8px}
+  .chip{min-height:46px;padding:10px 16px;font-size:1rem}
+  input,select,textarea{font-size:16px;min-height:52px;padding:14px}
+  .seg button{min-height:50px;font-size:1rem}
+  .row{grid-template-columns:1fr;gap:0}
+  .row>div{margin-bottom:20px}.row.field{margin-bottom:0}
+  .phone-mock{box-shadow:5px 5px 0 var(--yellow);padding:12px;border-radius:18px}
+  .pm-body{min-height:0;padding-top:14px}
+  .bubble{font-size:.95rem}
+  .send{padding:18px;font-size:1.12rem}
+  summary{font-size:1.3rem;padding:20px 2px;min-height:64px}
+  details p{font-size:1.05rem}
+  .final{padding:64px 0 56px}
+  .final h2{font-size:2.7rem}
+  .final .right .btn{width:100%;padding:17px}
+  footer{padding-bottom:30px}
+  .mbar{display:grid;grid-template-columns:auto 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(243,239,230,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:2px solid var(--ink);transition:transform .3s}
+  .mbar.hide{transform:translateY(110%)}
+  .mbar .btn{padding:15px 16px;font-size:1.05rem;box-shadow:3px 3px 0 var(--ink)}
+  .rv{transform:translateY(12px);transition-duration:.45s}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <rect x="6" y="4" width="14" height="56" rx="7" fill="#16161a"/>
+      <circle cx="13" cy="53" r="3.2" fill="#f3efe6"/>
+      <rect x="9" y="10" width="2.6" height="34" rx="1.3" fill="#f3efe6" opacity=".9"/>
+      <rect x="6" y="14" width="26" height="9" rx="2.5" fill="#16161a"/>
+      <rect x="6" y="28" width="20" height="8" rx="2.5" fill="#16161a"/>
+      <path d="M34 12h7v41h17v7H34z" fill="#ffc21a" stroke="#16161a" stroke-width="2.5" stroke-linejoin="round"/>
+      <g stroke="#16161a" stroke-width="2"><path d="M34 20h4M34 27h4M34 34h4M34 41h4M34 48h4"/></g>
+      <circle cx="49" cy="56.5" r="1.3" fill="#16161a"/><circle cx="53" cy="56.5" r="1.3" fill="#16161a"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+    <symbol id="ck" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="#16161a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Flávio Lima — início">
+      <svg width="42" height="42"><use href="#logo"/></svg>
+      <div><b>Flávio Lima</b><span>Serviços residenciais e comerciais</span></div>
+    </a>
+    <nav class="links">
+      <a href="#servicos">Serviços</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-wa btn-sm wa" href="#"><svg width="18" height="18"><use href="#wa"/></svg>WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap grid">
+    <div class="rv">
+      <div class="kicker"><span class="dot"></span>Orçamentos pelo WhatsApp</div>
+      <h1>Conserta, instala<br>e <span class="hl">resolve.</span></h1>
+      <p class="lead">Mais de 20 anos cuidando de casas e comércios. Elétrica, hidráulica, montagem, pintura, reparos e muito mais com um só profissional.</p>
+      <div class="ctas">
+        <a class="btn btn-wa wa" href="#"><svg width="22" height="22"><use href="#wa"/></svg>Pedir orçamento</a>
+        <a class="btn btn-line" href="#servicos">Ver serviços</a>
+      </div>
+      <div class="proof">
+        <div><b>20+</b><small>anos de experiência</small></div>
+        <div><b>15+</b><small>tipos de serviço</small></div>
+        <div><b>1</b><small>profissional responsável</small></div>
+      </div>
+    </div>
+
+    <aside class="os rv" aria-label="Exemplo de ordem de serviço">
+      <div class="os-head">
+        <div><div class="mono">Ordem de serviço</div><h3>Lista de pendências</h3></div>
+        <div class="os-logo"><svg width="40" height="40"><use href="#logo"/></svg></div>
+      </div>
+      <ul id="osList">
+        <li><span class="box"><svg width="13" height="13"><use href="#ck"/></svg></span>Tomada sem energia na cozinha</li>
+        <li><span class="box"><svg width="13" height="13"><use href="#ck"/></svg></span>Instalar cooktop novo</li>
+        <li><span class="box"><svg width="13" height="13"><use href="#ck"/></svg></span>Montar guarda-roupa</li>
+        <li><span class="box"><svg width="13" height="13"><use href="#ck"/></svg></span>Limpar calhas antes da chuva</li>
+        <li><span class="box"><svg width="13" height="13"><use href="#ck"/></svg></span>Fixar persiana da sala</li>
+      </ul>
+      <div class="os-foot">
+        <span class="mono">Resp.: Flávio Lima</span>
+        <span class="stamp" id="stamp" style="opacity:0">Resolvido</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="ticker" aria-hidden="true"><div class="t">
+    <span>Elétrica</span><span>Hidráulica</span><span>Cooktops</span><span>Gás encanado</span><span>Montagem de móveis</span><span>Drywall e gesso</span><span>Pintura</span><span>Telhados e calhas</span><span>Interfones</span><span>Rede</span><span>Eletrodomésticos</span>
+    <span>Elétrica</span><span>Hidráulica</span><span>Cooktops</span><span>Gás encanado</span><span>Montagem de móveis</span><span>Drywall e gesso</span><span>Pintura</span><span>Telhados e calhas</span><span>Interfones</span><span>Rede</span><span>Eletrodomésticos</span>
+  </div></div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="num">01</div>
+      <h2>Serviços</h2>
+      <p>Da instalação elétrica ao acabamento final. Um contato só para resolver as pendências da sua casa ou do seu negócio.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv" data-serv="Elétrica" tabindex="0" role="button"><span class="mono">01 / Elétrica</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Instalações elétricas</h3><p>Tomadas, pontos novos, reparos e instalação de ventiladores de teto.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Hidráulica" tabindex="0" role="button"><span class="mono">02 / Hidráulica</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 9 6 14a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/></svg></div><h3>Instalações hidráulicas</h3><p>Instalações e reparos hidráulicos em residências e comércios.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Cooktop / fogão" tabindex="0" role="button"><span class="mono">03 / Cozinha</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="8.5" cy="12.5" r="2.3"/><circle cx="15.5" cy="12.5" r="2.3"/></svg></div><h3>Cooktops e fogões</h3><p>Corte de bancada, instalação de cooktop e conversão de fogões para gás encanado.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Interfone" tabindex="0" role="button"><span class="mono">04 / Conectividade</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M9 16h6"/></svg></div><h3>Interfones e rede</h3><p>Interfones com automação e cabeamento de rede.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Montagem de móveis" tabindex="0" role="button"><span class="mono">05 / Montagem</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M9.5 11v2M14.5 11v2"/></svg></div><h3>Móveis, portas e persianas</h3><p>Montagem e desmontagem de móveis, instalação de portas, cortinas e persianas.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Drywall / gesso" tabindex="0" role="button"><span class="mono">06 / Acabamento</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8h14v13M5 13h14M10 8v5M15 13v8"/></svg></div><h3>Drywall e gesso</h3><p>Instalação e reparos em paredes e tetos de drywall e gesso.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Pintura" tabindex="0" role="button"><span class="mono">07 / Pintura</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="16" height="6" rx="1"/><path d="M19 6h2v5h-9v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></svg></div><h3>Pintura</h3><p>Pintura de ambientes internos e externos com acabamento cuidadoso.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Telhado / calhas" tabindex="0" role="button"><span class="mono">08 / Cobertura</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13 12 4l10 9"/><path d="M5 11v9h14v-9"/></svg></div><h3>Telhados e calhas</h3><p>Reparos e limpeza de telhados e calhas para evitar goteiras e infiltrações.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Eletrodoméstico" tabindex="0" role="button"><span class="mono">09 / Aparelhos</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="6" y="8" width="9" height="8" rx="1"/><path d="M18 9v.01M18 12v.01"/></svg></div><h3>Eletrodomésticos</h3><p>Reparos em micro-ondas, máquinas de lavar, fritadeiras elétricas e outros.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc rv" data-serv="Outro" tabindex="0" role="button"><span class="mono">10 / Diversos</span><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16161a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><h3>Pequenos reparos</h3><p>Ajustes e consertos do dia a dia avaliados caso a caso.</p><span class="go">Pedir orçamento <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></article>
+      <article class="svc cta-card rv" style="grid-column:span 2"><span class="mono" style="color:var(--ink)">Atendimento sob medida</span><h3 style="margin-top:16px;font-size:2.1rem">Tem uma lista de pendências?</h3><p style="margin-bottom:20px">Junte tudo em um único pedido e receba um orçamento completo. Você economiza tempo e resolve vários serviços em uma só visita.</p><a class="btn btn-wa" href="#orcamento"><svg width="20" height="20"><use href="#wa"/></svg>Montar meu pedido</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="experiencia">
+  <div class="ruler light"></div>
+  <div class="wrap" style="padding-top:70px">
+    <div class="sh rv">
+      <div class="num">02</div>
+      <h2>Experiência</h2>
+      <p>Mais de duas décadas de atendimento a residências e comércios.</p>
+    </div>
+    <div class="why">
+      <div class="big20 rv">
+        <div>
+          <div class="n">20<sup>+</sup></div>
+          <div class="dim mono"><i></i>anos de ofício<i></i></div>
+        </div>
+        <h3>Mais de 20 anos levando soluções</h3>
+      </div>
+      <div class="reasons">
+        <div class="reason rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><h3>Um único responsável</h3><p>Você fala direto com quem executa o serviço, do orçamento à entrega.</p></div></div>
+        <div class="reason rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div><div><h3>Várias especialidades</h3><p>Elétrica, hidráulica, montagem e acabamento sem precisar chamar vários prestadores.</p></div></div>
+        <div class="reason rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h3>Combinado é cumprido</h3><p>Valor e escopo definidos antes de começar, sem surpresas no final.</p></div></div>
+        <div class="reason rv"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V10M18 21V10M3 10l9-7 9 7"/></svg></div><div><h3>Casa ou comércio</h3><p>Atendimento a residências e estabelecimentos comerciais.</p></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer" style="height:96px"></div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="num">03</div>
+      <h2>Como funciona</h2>
+      <p>Um processo simples, do primeiro contato ao serviço concluído.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><span class="n">PASSO 1</span><h3>Você descreve</h3><p>Conte o que precisa pelo WhatsApp e, se puder, envie fotos do local ou do aparelho.</p></div>
+      <div class="step"><span class="n">PASSO 2</span><h3>Orçamento claro</h3><p>Você recebe o valor e combina o melhor dia e horário para o atendimento.</p></div>
+      <div class="step"><span class="n">PASSO 3</span><h3>Serviço feito</h3><p>Execução com técnica e cuidado, e o ambiente entregue limpo e organizado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="orcamento">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="num">04</div>
+      <h2>Monte seu pedido</h2>
+      <p>Marque os serviços, preencha os dados e envie direto para o WhatsApp do Flávio. A mensagem já vai pronta.</p>
+    </div>
+    <div class="qb">
+      <form class="panel rv" id="qform" onsubmit="return false">
+        <div class="field">
+          <span class="lbl">1. Quais serviços você precisa? <span class="hint">(toque para marcar)</span></span>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="field">
+          <span class="lbl">2. Tipo de imóvel</span>
+          <div class="seg" id="tipo"><button type="button" aria-pressed="true">Residência</button><button type="button" aria-pressed="false">Comércio</button><button type="button" aria-pressed="false">Condomínio</button></div>
+        </div>
+        <div class="row field">
+          <div><label for="nome">3. Seu nome</label><input id="nome" placeholder="Ex.: Ana Souza" autocomplete="name"></div>
+          <div><label for="bairro">4. Bairro / cidade</label><input id="bairro" placeholder="Ex.: Centro, Campinas"></div>
+        </div>
+        <div class="field">
+          <label for="quando">5. Para quando?</label>
+          <select id="quando"><option>O quanto antes</option><option>Nesta semana</option><option>Nos próximos dias</option><option>Só quero um orçamento</option></select>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="desc">Detalhes <span class="hint">(opcional)</span></label>
+          <textarea id="desc" placeholder="Ex.: o cooktop é de 4 bocas e a bancada é de granito."></textarea>
+        </div>
+      </form>
+
+      <div class="preview rv">
+        <div class="phone-mock" aria-live="polite">
+          <div class="pm-top"><div class="av"><svg width="26" height="26"><use href="#logo"/></svg></div><div><b>Flávio Lima</b><small>WhatsApp · (19) 98104-2332</small></div></div>
+          <div class="pm-body"><div class="bubble" id="bubble"></div></div>
+        </div>
+        <a class="btn btn-wa send" id="sendBtn" href="#"><svg width="22" height="22"><use href="#wa"/></svg>Enviar pelo WhatsApp</a>
+        <p class="note">Depois de enviar, anexe fotos na conversa para agilizar o orçamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="wrap">
+    <div class="sh rv">
+      <div class="num">05</div>
+      <h2>Dúvidas frequentes</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Como é feito o orçamento?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Pelo WhatsApp. Descreva o serviço e envie fotos do local ou do aparelho. Com essas informações o Flávio passa o valor e vocês combinam o melhor dia para o atendimento.</p></details>
+      <details><summary>Atende comércios também?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sim. Os serviços são prestados tanto para residências quanto para estabelecimentos comerciais.</p></details>
+      <details><summary>Posso pedir vários serviços de uma vez?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Pode e é o ideal. Use a seção “Monte seu pedido” para marcar tudo o que precisa e receber um orçamento único.</p></details>
+      <details><summary>Faz conversão de fogão para gás encanado?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sim. Também faz o corte de bancada e a instalação de cooktops.</p></details>
+      <details><summary>Conserta eletrodomésticos?<span class="pm"><svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sim. Micro-ondas, máquinas de lavar, fritadeiras elétricas e outros aparelhos. Informe a marca, o modelo e o defeito na mensagem.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap grid">
+    <h2 class="rv">Tem algo para<br>consertar ou instalar?</h2>
+    <div class="right rv">
+      <a class="tel wa" href="#">(19) 98104-2332</a>
+      <a class="btn btn-wa wa" href="#" style="box-shadow:5px 5px 0 var(--ink)"><svg width="22" height="22"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><svg width="36" height="36" style="background:var(--paper);border-radius:8px;padding:3px"><use href="#logo"/></svg><div><b>Flávio Lima</b><span style="color:#8a877f">Mais de 20 anos levando soluções</span></div></div>
+    <div>WhatsApp (19) 98104-2332 · © <span id="yr"></span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-line" href="tel:+5519981042332" aria-label="Ligar"><svg width="20" height="20"><use href="#tel"/></svg>Ligar</a>
+  <a class="btn btn-wa wa" href="#"><svg width="20" height="20"><use href="#wa"/></svg>Orçamento no WhatsApp</a>
+</div>
+
+<script>
+const WA='5519981042332';
+const waUrl=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+const DEF='Olá, Flávio! Vim pelo seu site e gostaria de solicitar um orçamento.';
+document.querySelectorAll('a.wa').forEach(a=>{a.href=waUrl(DEF);a.target='_blank';a.rel='noopener'});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Quote builder
+const SERV=['Elétrica','Hidráulica','Cooktop / fogão','Gás encanado','Interfone','Cabeamento de rede','Montagem de móveis','Portas','Cortinas / persianas','Drywall / gesso','Pintura','Telhado / calhas','Eletrodoméstico','Outro'];
+const chips=document.getElementById('chips');
+SERV.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=s;b.setAttribute('aria-pressed','false');b.onclick=()=>{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');build()};chips.appendChild(b)});
+const tipo=document.getElementById('tipo');
+tipo.querySelectorAll('button').forEach(b=>b.onclick=()=>{tipo.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');build()});
+['nome','bairro','quando','desc'].forEach(id=>document.getElementById(id).addEventListener('input',build));
+const send=document.getElementById('sendBtn'),bubble=document.getElementById('bubble');
+send.target='_blank';send.rel='noopener';
+function build(){
+  const sel=[...chips.querySelectorAll('[aria-pressed="true"]')].map(b=>b.textContent);
+  const t=tipo.querySelector('[aria-pressed="true"]').textContent;
+  const nome=document.getElementById('nome').value.trim();
+  const bairro=document.getElementById('bairro').value.trim();
+  const quando=document.getElementById('quando').value;
+  const desc=document.getElementById('desc').value.trim();
+  let m=`Olá, Flávio! ${nome?`Meu nome é ${nome}. `:''}Vim pelo seu site e gostaria de um orçamento.\n`;
+  m+=`\n• Serviços: ${sel.length?sel.join(', '):'(a definir)'}`;
+  m+=`\n• Imóvel: ${t}`;
+  if(bairro) m+=`\n• Local: ${bairro}`;
+  m+=`\n• Prazo: ${quando}`;
+  if(desc) m+=`\n• Detalhes: ${desc}`;
+  bubble.textContent=m;
+  const s=document.createElement('small');const d=new Date();s.textContent=`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} ✓✓`;bubble.appendChild(s);
+  send.href=waUrl(m);
+}
+build();
+
+// Card de serviço -> marca no pedido e rola até ele
+document.querySelectorAll('.svc[data-serv]').forEach(c=>{
+  const go=()=>{const ch=[...chips.children].find(b=>b.textContent===c.dataset.serv);
+    if(ch){ch.setAttribute('aria-pressed','true');build()}
+    document.getElementById('orcamento').scrollIntoView({behavior:'smooth'})};
+  c.addEventListener('click',go);c.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+});
+// Esconde a barra fixa quando o botão de envio do pedido está na tela
+const mbar=document.querySelector('.mbar');
+new IntersectionObserver(es=>es.forEach(e=>mbar.classList.toggle('hide',e.isIntersecting)),{threshold:.3}).observe(document.getElementById('sendBtn'));
+
+// Work-order checklist animation
+const items=[...document.querySelectorAll('#osList li')],stamp=document.getElementById('stamp');
+function runOS(){items.forEach(li=>li.classList.remove('on'));stamp.style.opacity=0;stamp.style.transition='none';
+  items.forEach((li,i)=>setTimeout(()=>li.classList.add('on'),700+i*650));
+  setTimeout(()=>{stamp.style.transition='opacity .3s, transform .3s';stamp.style.opacity=1},700+items.length*650+200);}
+runOS();setInterval(runOS,9000);
+
+// Reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
+</script>
+</body>
+</html>
